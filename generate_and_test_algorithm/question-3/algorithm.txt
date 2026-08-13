@@ -1,0 +1,25 @@
+ALGORITHM: Generate and Test - Square of 625
+
+1. Start.
+
+2. Define the target value as 625.
+
+3. Identify the constraint:
+   A number whose square ends in 25 must end in 5.
+
+4. Generate candidate numbers between 1 and 50 that end in 5:
+       5, 15, 25, 35, 45
+
+5. For each candidate:
+       a. Calculate candidate × candidate.
+       b. Compare the result with 625.
+       c. If the result equals 625:
+              - Return the candidate.
+              - Stop the search.
+       d. Otherwise:
+              - Reject the candidate.
+              - Continue with the next candidate.
+
+6. If no candidate satisfies the condition, report that no solution was found.
+
+7. End.

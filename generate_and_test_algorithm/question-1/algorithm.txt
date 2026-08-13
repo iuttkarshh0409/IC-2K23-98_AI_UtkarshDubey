@@ -1,0 +1,24 @@
+ALGORITHM: Generate and Test - Square of 144
+
+1. Start.
+
+2. Define the target value as 144.
+
+3. Generate candidate numbers between 1 and 20 that can potentially produce
+   a square ending in 4:
+       2, 8, 12, 18
+
+4. For each candidate:
+       a. Calculate candidate × candidate.
+       b. Compare the result with 144.
+       c. If the result equals 144:
+              - Return the candidate.
+              - Stop the search.
+       d. Otherwise:
+              - Reject the candidate.
+              - Continue with the next candidate.
+
+5. If all candidates are tested without finding a solution, report that no
+   solution was found.
+
+6. End.

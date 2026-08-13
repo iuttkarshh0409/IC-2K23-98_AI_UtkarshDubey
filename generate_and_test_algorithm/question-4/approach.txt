@@ -1,0 +1,40 @@
+APPROACH
+
+The goal is to find a number between 1 and 100 whose cube is 729.
+
+Two candidate-generation strategies can be considered.
+
+APPROACH 1: Optimized Generation
+
+A number ending in 9 has a cube that also ends in 9.
+
+Since the target 729 ends in 9, numbers ending in 9 are promising candidates.
+
+The candidates between 1 and 100 are:
+
+9, 19, 29, 39, 49, 59, 69, 79, 89, 99
+
+Test each candidate by calculating its cube.
+
+The first candidate is:
+
+9³ = 729
+
+Therefore, the solution is found immediately and the search stops.
+
+APPROACH 2: Traditional Generate-and-Test
+
+A simpler approach is to generate every number sequentially from 1 to 100.
+
+For each candidate, calculate its cube and compare it with 729.
+
+The candidates are tested as:
+
+1³ = 1      → reject
+2³ = 8      → reject
+3³ = 27     → reject
+...
+9³ = 729    → accept and stop
+
+The optimized approach requires fewer tests, while the traditional approach
+follows the basic Generate-and-Test strategy directly.

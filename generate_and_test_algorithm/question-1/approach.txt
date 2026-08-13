@@ -1,0 +1,27 @@
+APPROACH
+
+The goal is to find a number between 1 and 20 whose square is 144.
+
+A basic Generate-and-Test approach would generate every number from 1 to 20
+and test whether its square is equal to 144.
+
+However, the search space can be reduced using the properties of the target.
+
+Since 144 ends in 4, the candidate number can end in either 2 or 8 because
+numbers ending in 2 or 8 produce squares ending in 4.
+
+Therefore, instead of testing every number from 1 to 20, generate only the
+promising candidates:
+
+2, 8, 12, 18
+
+Test each candidate by calculating its square.
+
+If candidate × candidate equals 144, the candidate is the required solution
+and the search can stop.
+
+For this problem:
+
+2²  = 4    → reject
+8²  = 64   → reject
+12² = 144  → accept and stop

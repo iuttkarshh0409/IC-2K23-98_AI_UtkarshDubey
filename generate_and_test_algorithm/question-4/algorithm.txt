@@ -1,0 +1,24 @@
+ALGORITHM: Generate and Test - Cube of 729
+
+1. Start.
+
+2. Define the target value as 729.
+
+3. Generate candidate numbers between 1 and 100.
+
+4. Use a constrained generator by considering numbers ending in 9:
+       9, 19, 29, 39, 49, 59, 69, 79, 89, 99
+
+5. For each candidate:
+       a. Calculate candidate × candidate × candidate.
+       b. Compare the result with 729.
+       c. If the result equals 729:
+              - Return the candidate.
+              - Stop the search.
+       d. Otherwise:
+              - Reject the candidate.
+              - Continue with the next candidate.
+
+6. If no candidate satisfies the condition, report that no solution was found.
+
+7. End.

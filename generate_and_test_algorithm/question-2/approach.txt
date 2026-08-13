@@ -1,0 +1,31 @@
+APPROACH
+
+The goal is to find two numbers between 1 and 10 whose sum is 11.
+
+A basic Generate-and-Test approach would generate possible pairs of numbers
+and test each pair.
+
+The candidate generation should be systematic so that no valid solution is
+accidentally skipped.
+
+Generate pairs from the available numbers and test their sums.
+
+For example, candidate pairs can be generated as:
+
+(1, 2), (1, 3), (1, 4), ...,
+(2, 3), (2, 4), ...
+
+For each pair, calculate the sum.
+
+If the sum equals 11, the pair is a valid solution and the search can stop.
+
+The important point is that the original problem asks for a pair of numbers,
+not all possible pairs. Therefore, once one valid pair is found, there is no
+need to continue searching.
+
+A valid result is:
+
+5 + 6 = 11
+
+The generator must systematically cover the possible pairs so that the
+solution is not accidentally eliminated by an unreliable heuristic.

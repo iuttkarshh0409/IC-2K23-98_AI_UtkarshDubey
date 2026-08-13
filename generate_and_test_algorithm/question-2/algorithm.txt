@@ -1,0 +1,23 @@
+ALGORITHM: Generate and Test - Sum of Two Numbers
+
+1. Start.
+
+2. Define the target sum as 11.
+
+3. Generate a candidate pair of numbers from 1 to 10.
+
+4. For each candidate pair:
+       a. Calculate the sum of the two numbers.
+       b. Compare the sum with 11.
+       c. If the sum equals 11:
+              - Return the pair.
+              - Stop the search.
+       d. Otherwise:
+              - Reject the pair.
+              - Generate the next candidate pair.
+
+5. Continue until a valid pair is found or all possible pairs have been tested.
+
+6. If no valid pair exists, report that no solution was found.
+
+7. End.

@@ -1,0 +1,28 @@
+APPROACH
+
+The goal is to find a number between 1 and 50 whose square is 625.
+
+Instead of testing every number from 1 to 50, the search space can be reduced
+using the properties of the target.
+
+The target value 625 ends in 25.
+
+A square ending in 25 must come from a number ending in 5.
+
+Therefore, the possible candidates between 1 and 50 are:
+
+5, 15, 25, 35, 45
+
+Generate these candidates one by one and test their squares.
+
+The test is:
+
+candidate × candidate == 625
+
+Testing proceeds as:
+
+5²  = 25    → reject
+15² = 225   → reject
+25² = 625   → accept and stop
+
+The candidate 25 is therefore the solution.
