@@ -1,0 +1,68 @@
+Enter the capacity of the first jug: 3
+Enter the capacity of the second jug: 5
+Enter the target amount of water to be measured: 4
+
+Exploring State: (0, 0)
+
+Exploring State: (3, 0)
+
+Exploring State: (0, 5)
+
+Exploring State: (3, 5)
+
+Exploring State: (0, 3)
+
+Exploring State: (3, 2)
+
+Exploring State: (3, 3)
+
+Exploring State: (0, 2)
+
+Exploring State: (1, 5)
+
+Exploring State: (2, 0)
+
+Exploring State: (1, 0)
+
+Exploring State: (2, 5)
+
+Exploring State: (0, 1)
+
+Exploring State: (3, 4)
+
+========== SEARCH RESULT ==========
+
+Step 1
+Initial State   : (0, 0)
+Action Taken    : Fill Jug 2
+Resultant State : (0, 5)
+
+Step 2
+Initial State   : (0, 5)
+Action Taken    : Pour Jug 2 → Jug 1
+Resultant State : (3, 2)
+
+Step 3
+Initial State   : (3, 2)
+Action Taken    : Empty Jug 1
+Resultant State : (0, 2)
+
+Step 4
+Initial State   : (0, 2)
+Action Taken    : Pour Jug 2 → Jug 1
+Resultant State : (2, 0)
+
+Step 5
+Initial State   : (2, 0)
+Action Taken    : Fill Jug 2
+Resultant State : (2, 5)
+
+Step 6
+Initial State   : (2, 5)
+Action Taken    : Pour Jug 2 → Jug 1
+Resultant State : (3, 4)
+
+===================================
+Total Operations : 6
+Visited States   : 15
+Final State      : (3, 4)
