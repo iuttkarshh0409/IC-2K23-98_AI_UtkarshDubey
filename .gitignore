@@ -1,0 +1,159 @@
+# ==========================================
+# Python
+# ==========================================
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Compiled Python files
+*.pyo
+*.pyd
+
+# Python build / distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+
+# ==========================================
+# Virtual Environments
+# ==========================================
+
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+
+# ==========================================
+# Jupyter Notebook
+# ==========================================
+
+.ipynb_checkpoints/
+
+# Jupyter temporary files
+*.ipynb_checkpoints
+
+
+# ==========================================
+# IDE / Editor Files
+# ==========================================
+
+.vscode/
+.idea/
+
+# VS Code local history
+.history/
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+
+# ==========================================
+# Operating System Files
+# ==========================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+
+# ==========================================
+# Environment / Secrets
+# ==========================================
+
+.env
+.env.*
+!.env.example
+
+# Local configuration
+*.local
+
+
+# ==========================================
+# Logs
+# ==========================================
+
+*.log
+logs/
+
+
+# ==========================================
+# Temporary / Cache Files
+# ==========================================
+
+*.tmp
+*.temp
+.cache/
+.cache
+
+
+# ==========================================
+# Machine Learning / Model Artifacts
+# ==========================================
+
+# Temporary checkpoints
+*.ckpt
+*.tmp
+
+# Uncomment these only if you decide that
+# trained models should NOT be committed:
+#
+# models/
+# *.pt
+# *.pth
+# *.pkl
+# *.joblib
+
+
+# ==========================================
+# Large Dataset Files
+# ==========================================
+
+# Do NOT automatically ignore CSV files because
+# your lab manual explicitly expects datasets.
+#
+# If a dataset becomes too large for Git:
+# *.zip
+# *.tar
+# *.gz
+
+
+# ==========================================
+# Generated Notebook Artifacts
+# ==========================================
+
+# Uncomment if you decide notebook outputs
+# should not be committed:
+#
+# *.html
+
+
+# ==========================================
+# OS / Python Miscellaneous
+# ==========================================
+
+.python-version
+pip-wheel-metadata/

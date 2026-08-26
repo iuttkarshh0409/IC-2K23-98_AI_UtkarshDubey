@@ -363,3 +363,4 @@ Each version represents an incremental improvement in the implementation.
 The Water Jug Problem was successfully implemented as a state-space problem. Starting from an interactive implementation, the experiment was progressively enhanced with state transition tracking, modular operations, visited-state handling, transition generation, and automated state-space exploration.
 
 The experiment establishes the foundation required for studying classical AI search algorithms, where the same state space can be explored using different search strategies.
+
