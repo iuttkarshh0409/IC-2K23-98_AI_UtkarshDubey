@@ -1,0 +1,157 @@
+AI LAB TEST 2 SET 9: INTELLIGENT TRAVEL PLANNER EXECUTION OUTPUTS
+=================================
+
+Environment: SWI-Prolog Source file: travel_planner.pl
+
+NOTE: The outputs below are based on the successful execution results
+produced by the program. Test Cases 1-6 were executed using
+run_all_tests. The blocked-connection test was executed separately after
+marking the Bhopal-Delhi connection as unavailable.
+
+  -----------------------
+  1. RUN ALL TEST CASES
+  -----------------------
+
+Query:
+
+?- run_all_tests.
+
+Output:
+
+     INTELLIGENT TRAVEL PLANNER
+             ALL TESTS
+
+TEST 1: CHEAPEST ROUTE
+
+===== INTELLIGENT TRAVEL PLANNER ===== Source: indore Destination: delhi
+Preference: cheapest
+
+Recommended Route: indore -> bhopal -> delhi Total Cost: Rs. 1150 Travel
+Time: 12 hours Total Distance: 975 km
+
+Reason: Route selected according to cheapest preference.
+
+TEST 2: SHORTEST ROUTE
+
+===== INTELLIGENT TRAVEL PLANNER ===== Source: indore Destination: delhi
+Preference: shortest
+
+Recommended Route: indore -> ujjain -> jaipur -> delhi Total Cost: Rs.
+1250 Travel Time: 13 hours Total Distance: 885 km Reason: Route selected
+according to shortest preference.
+
+TEST 3: FASTEST ROUTE
+
+===== INTELLIGENT TRAVEL PLANNER ===== Source: indore Destination: delhi
+Preference: fastest
+
+Recommended Route: indore -> bhopal -> delhi Total Cost: Rs. 1150 Travel
+Time: 12 hours Total Distance: 975 km
+
+Reason: Route selected according to fastest preference.
+
+TEST 4: AVOID BHOPAL
+
+===== TRAVEL PLANNER: CITY AVOIDANCE ===== Source: indore Destination:
+delhi Preference: cheapest Avoid City: bhopal
+
+Recommended Route: indore -> ujjain -> jaipur -> delhi Total Cost: Rs.
+1250 Travel Time: 13 hours Total Distance: 885 km
+
+TEST 5: COMPARE AVAILABLE ROUTES
+
+===== ROUTE COMPARISON ===== Route 1: indore -> bhopal -> delhi Cost:
+Rs. 1150 Time: 12 hours Distance: 975 km
+
+Route 2: indore -> ujjain -> jaipur -> delhi Cost: Rs. 1250 Time: 13
+hours Distance: 885 km
+
+Route 3: indore -> bhopal -> jaipur -> delhi Cost: Rs. 1300 Time: 14
+hours Distance: 1075 km
+
+Route 4: indore -> ujjain -> jaipur -> kota -> delhi Cost: Rs. 1500
+Time: 16.5 hours Distance: 1355 km
+
+Route 5: indore -> bhopal -> jaipur -> kota -> delhi Cost: Rs. 1550
+Time: 17.5 hours Distance: 1545 km
+
+Route 6: indore -> ujjain -> jaipur -> bhopal -> delhi Cost: Rs. 2400
+Time: 23 hours Distance: 1985 km
+
+Route 7: indore -> mumbai -> bhopal -> delhi Cost: Rs. 2900 Time: 29
+hours Distance: 1965 km
+
+Route 8: indore -> mumbai -> bhopal -> jaipur -> delhi Cost: Rs. 3050
+Time: 31 hours Distance: 2065 km
+
+Route 9: indore -> mumbai -> bhopal -> jaipur -> kota -> delhi Cost: Rs.
+3300 Time: 34.5 hours Distance: 2535 km
+
+TEST 6: DIFFERENT SOURCE AND DESTINATION
+
+===== INTELLIGENT TRAVEL PLANNER ===== Source: indore Destination:
+mumbai Preference: fastest
+
+Recommended Route: indore -> bhopal -> mumbai Total Cost: Rs. 1050
+Travel Time: 11 hours Total Distance: 795 km
+
+Reason: Route selected according to fastest preference.
+
+          ALL TESTS COMPLETED
+
+true.
+
+  ----------------------------
+  2. BLOCKED CONNECTION TEST
+  ----------------------------
+
+Test condition:
+
+The following fact was added to the knowledge base to mark the
+Bhopal-Delhi connection as unavailable:
+
+blocked_connection(bhopal, delhi).
+
+Query:
+
+?- travel_plan(indore, delhi, cheapest).
+
+Output:
+
+===== INTELLIGENT TRAVEL PLANNER ===== Source: indore Destination: delhi
+Preference: cheapest
+
+Recommended Route: indore -> ujjain -> jaipur -> delhi Total Cost: Rs.
+1250 Travel Time: 13 hours Total Distance: 885 km
+
+Reason: Route selected according to cheapest preference.
+
+true.
+
+Observation:
+
+The planner excluded the unavailable Bhopal-Delhi connection and
+selected the next cheapest available route through Ujjain and Jaipur.
+
+  ----------------------------
+  3. INDIVIDUAL TEST QUERIES
+  ----------------------------
+
+Cheapest route: ?- travel_plan(indore, delhi, cheapest).
+
+Shortest route: ?- travel_plan(indore, delhi, shortest).
+
+Fastest route: ?- travel_plan(indore, delhi, fastest).
+
+Avoid a city: ?- travel_plan_avoiding(indore, delhi, cheapest, bhopal).
+
+Compare all available routes: ?- compare_routes(indore, delhi,
+cheapest).
+
+Different destination: ?- travel_plan(indore, mumbai, fastest).
+
+Run all predefined tests: ?- run_all_tests.
+
+  ---------------
+  END OF OUTPUT
+  ---------------
